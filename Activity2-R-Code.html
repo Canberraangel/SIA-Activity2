@@ -192,7 +192,7 @@ $(document).ready(function () {
 </div>
 
 
-<p><strong>General Comments</strong> I found this activity somewhat confusing. I found it hard to recall which objects contained which data. A couple of times after I had pre-processed the data, I found the objects still had NA’s which had to be processed again. I think this was because I included the case number and player names in the initial objects then had to remove them.</p>
+<p><strong>General Comments</strong> I found this activity somewhat confusing. I found it hard to recall which objects contained which data. A couple of times after I had pre-processed the data, I found the objects still had NA’s which had to be processed again. I think this was because I included the case number and player names in the initial objects then had to remove them and create new objects.</p>
 <pre class="r"><code>setwd(&quot;C:/Users/canbe/OneDrive/Documents/JEANS/University/Informatics&quot;)
 getwd()</code></pre>
 <pre><code>## [1] &quot;C:/Users/canbe/OneDrive/Documents/JEANS/University/Informatics&quot;</code></pre>
@@ -666,7 +666,9 @@ sum(is.na(test_processed1))</code></pre>
 head(predicted_TDs)</code></pre>
 <pre><code>##        2        6        8       12       17       19 
 ## 42.24368 28.96651 28.97400 32.55650 27.67134 27.61494</code></pre>
-<p>data.frame(observed_TDs=test_processed1$TD, predicted_TD)</p>
+</div>
+<div id="question-19-model-performance" class="section level2">
+<h2>QUESTION 19: Model performance</h2>
 <pre class="r"><code>data.frame(observed_TDs = test_processed1$TD, predicted_TDs)</code></pre>
 <pre><code>##     observed_TDs predicted_TDs
 ## 2             50    42.2436840
